@@ -1,0 +1,148 @@
+/*Secondary Menu*/
+
+.second-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    padding: 10px;
+   
+
+    .search {
+       
+            a {
+            color: $primary-color;
+            margin-right: 20px;
+            i {
+                margin-right: 10px;
+                
+            }
+
+            &:hover {
+                color: lighten($primary-color, 50%);
+            }
+        
+        }
+
+        @include d(s) {
+            a {
+                margin-right: 0px;
+            }
+        }
+    }
+    
+    .search-box {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        padding: 10px;
+       
+       
+        .search-text {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0;
+            color: $secondary-color;
+            line-height: 30px;
+            padding-left: 5px;
+            transition: .1s;
+            width: 0px;
+            outline: none;
+            overflow-x: hidden;
+            @include tipo-1(14);
+           
+           
+           &::placeholder {
+            background: rgba(20, 20, 20, .2);
+               padding: 15px 10px;
+               color: $secondary-color;
+               @include d(s) {
+                @include tipo-1(14);
+            }
+               
+           }
+            @include d(s) {
+                @include tipo-1(14);
+            }
+
+            &:focus {
+                width: 250px;
+                @include d(s) {
+                    width: 200px;
+                }
+                @include d(m) {
+                    width: 200px;
+                
+                    
+                }
+            }
+           
+          
+        }
+
+       
+       
+       &:hover > .search-text{
+           width: 250px;
+           @include d(l) {
+            width: 200px;
+        }
+
+             @include d(s) {
+               width: 200px;
+            }
+            @include d(m) {
+                width: 170px;
+            }
+       }
+
+    
+        .search-btn {
+            
+            @include tipo-1(14);
+
+            @include d(s) {
+                @include tipo-1(14); 
+            }
+            i {
+                @include d(m) {
+                    margin-right: -15px;
+                }
+            }
+            span {
+                @include d(m) {
+                    display: none;
+                }
+            }
+        }    
+        
+    }
+
+    .picture img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin-top: 5px;
+        
+        @include d(s) {
+            display: none;
+        }
+       
+    }
+
+    @include d(s) {
+        .search-btn #bell {
+            display: none;
+        }
+    }
+
+   
+}
+
+
+
+ 
+

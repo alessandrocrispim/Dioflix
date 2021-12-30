@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+//FONT
+
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto + em;
+}
+
+@mixin tipo-1 ($size) {
+    font-family: 'Poppins',sans-serif;
+    @if $size == 16 {
+        font-size: em(16);
+    }
+    @else if $size == 12 {
+        font-size: em(12);
+    }
+    @else if $size == 14 {
+        font-size: em(14);
+    }
+    @else if $size == 32 {
+        font-size: em(32);
+        font-weight: 500;
+    }
+    @else if $size == 70 {
+        font-size: em(70);
+    }
+    @else if $size == 50 {
+        font-size: em(50);
+    }
+    @else if $size == 60 {
+        font-size: em(60);
+    }
+   
+}
+
+
+// COLOR
+
+$primary-color: #aaaaaa;
+$secondary-color: #fff;
+
+
+
+//RESPONSIVO
+
+
+$t-device: 73.25rem; //tablet 1172px
+$l-device: 56.563rem; //low  905px
+$s-device: 48.75rem;  //small 780px
+$b-device: 36.938rem; //button 591px
+$m-device: 29.625rem; //mobile 474px
+$i-device: 20rem; // iphone-s 320px
+
+
+
+
+
+@mixin d($size) {
+    @if $size == t {
+        @media screen and (max-width: $t-device) {
+            @content;
+        }
+    }
+    @if $size == l {
+        @media screen and (max-width: $l-device) {
+            @content;
+        }
+    }
+    @else if $size == s {
+        @media screen and (max-width: $s-device) {
+            @content;
+        }         
+    }
+    @else if $size == b {
+        @media screen and (max-width: $b-device) {
+            @content; 
+        }
+    }
+    @else if $size == m {
+        @media screen and (max-width: $m-device) {
+            @content; 
+        }
+    }
+    @else if $size == i {
+        @media screen and (max-width: $i-device) {
+            @content; 
+        }
+    }
+}
+

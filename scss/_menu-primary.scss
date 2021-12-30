@@ -1,0 +1,189 @@
+
+body {
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Menu*/
+
+.container {
+    
+   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) );
+   max-width: 100%;
+   padding: 5px calc((100% - 95%) / 2);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+   
+   
+
+    .logo img{
+        margin: 0 auto;
+        margin-top: 5px;
+        max-width: 250px;
+        max-height: 50px;  
+        flex: 1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    @include d(s) {
+        .logo {
+            background-image: url(../img/logo.svg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            width: 60px;
+            height: 50px;
+        }
+    }
+    @include d(m) {
+        .logo {
+            width: 50px;
+        }
+    }
+
+
+    /* Primary Menu*/
+
+    
+
+  
+
+    .primary-menu ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        margin-left: 60px;
+        flex: 1;
+
+       
+
+        
+        li a {
+            color: $primary-color;
+            margin-right: 20px;
+            padding: 10px;
+          
+            
+           &:hover {
+               color: lighten($primary-color, 50%);
+           } 
+        }
+       
+       
+    }
+
+    /*Menu Tablet*/
+
+    #btn-mobile {
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: 2rem;
+        color: $primary-color;
+        background: rgba(20, 20, 20, 0);
+        border: none;
+        @include tipo-1(16);
+        
+        &:hover {
+            color: lighten($primary-color, 50%);
+        }
+        display: none;
+
+        @include d(s) {
+            margin-left: .3rem;
+            @include tipo-1(14);
+        }
+        @include d(m) {
+            .menu {
+                display: none;
+            }
+        }
+    }
+
+        @include d(t) {
+            #btn-mobile{
+                display: flex;
+                cursor: pointer;
+                gap: .5rem;
+                align-items: center;
+
+                #hamburguer {
+                    display: block;
+                    border-top: 2px solid;
+                    width: 20px;
+                    &::after, &::before {
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        background: currentColor;
+                        margin-top: 3px;
+                        transition: .3s;
+                        position: relative;
+                        @include d(s) {
+                            width: 15px;
+                        }
+                    }
+                    @include d(s) {
+                        width: 15px;
+                    }
+                }
+            }
+
+            #menu {
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: 4.9rem;
+                right: 0;
+                background: rgba(20, 20, 20, .9);
+                height: 0px;
+                z-index: 1000;
+                transition: .6s;
+                visibility: hidden;
+                overflow-y: hidden;
+
+                a {
+                    display: block;
+                    padding: 2rem 0;
+                    margin: 0 1rem;
+                    border-bottom: 1px solid rgba(0, 0, 0, .05);
+                    display: flex;
+                    justify-content: center;
+                }
+                @include d(s) {
+                    top: 4.3rem;
+                }
+            }
+            #nav.active #menu {
+                height: calc(100vh - 14%);
+                visibility: visible;
+                overflow: hidden;
+                
+            }
+            #nav.active #hamburguer {
+                border-top-color: transparent;
+                &::after {
+                    transform: rotate(135deg);
+                    top: -5px;
+                }
+                &::before {
+                    transform: rotate(-135deg);
+                    
+                }
+            }
+        }
+
+        
+
+       
+       
+    
+
+
+}   

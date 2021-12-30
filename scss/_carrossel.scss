@@ -1,0 +1,35 @@
+h2 {
+    color: $secondary-color;
+    max-width: 95vw;
+    margin-left: 45px;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    @include tipo-1(32);
+  
+    @include d(m) {
+       display: none;
+      }
+}
+
+.dio h2 {
+    margin: -20px 20px 20px 45px;
+    @include d(l) {
+      margin-top: 0px;
+    }
+}
+    
+
+
+.box-cursos {
+    height: 100%;
+    width: 100%;
+    display: block;
+    @include d(l) {
+      margin-bottom: 10px;
+    }
+    @include d(m) {
+        margin-top: 150px;
+      }
+    
+   
+}

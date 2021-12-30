@@ -1,0 +1,48 @@
+.buttons{
+    @include d(b) {
+        text-align: center;
+        
+    }
+    @include d(m) {
+        margin-left: 1.4rem;
+        margin-top: -30px;
+    }
+
+  
+
+    .botao {
+        
+       
+        border-radius: 5px;
+        background-color: rgba(109, 109, 110, 0.7);
+        border: none;
+        color: $secondary-color;
+        font-weight: 600;
+        padding: 15px 30px;
+        margin-right: 40px;
+        margin-top: 40px;
+        align-items: center;
+        @include tipo-1(14);
+        
+        cursor: pointer;
+        transition: .1s ease all;
+
+        i {
+            margin-right: 7px;
+        }
+        
+        
+
+        &:hover {
+            color: black;
+            background-color: $secondary-color;
+        }
+
+        @include d(b) {
+            margin-top: 50px;
+        }
+
+        
+    }
+
+}
