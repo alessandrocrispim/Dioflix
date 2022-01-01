@@ -1,4 +1,4 @@
-
+// https://alessandrocrispim.github.io/Dioflix/
 body {
     font-family: 'Poppins',sans-serif;
 }
@@ -7,6 +7,8 @@ body {
 
 .container {
     position: fixed;
+    z-index: 1000;
+    top: 0;
     right: 0;
     left: 0;
    background: rgba(0, 0, 0, 1) ;
@@ -16,6 +18,14 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include d(m) {
+        position: initial;
+        margin-bottom: 300px;
+    }
+    @include d(i) {
+        margin-bottom: 250px;
+    }
     
 
    

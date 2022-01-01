@@ -49,6 +49,8 @@ $secondary-color: #fff;
 $t-device: 73.25rem; //tablet 1172px
 $l-device: 56.563rem; //low  905px
 $s-device: 48.75rem;  //small 780px
+$f-device: 39.375rem; //fixed 630px
+$c-device: 38.313rem; // corpo 613px
 $b-device: 36.938rem; //button 591px
 $m-device: 29.625rem; //mobile 474px
 $i-device: 20rem; // iphone-s 320px
@@ -70,6 +72,16 @@ $i-device: 20rem; // iphone-s 320px
     }
     @else if $size == s {
         @media screen and (max-width: $s-device) {
+            @content;
+        }         
+    }
+    @else if $size == f {
+        @media screen and (max-width: $f-device) {
+            @content;
+        }         
+    }
+    @else if $size == c {
+        @media screen and (max-width: $c-device) {
             @content;
         }         
     }

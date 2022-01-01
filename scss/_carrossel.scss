@@ -1,14 +1,23 @@
 h2 {
+  position: relative;
+    z-index: 1000;
     color: $secondary-color;
     max-width: 95vw;
     margin-left: 45px;
     margin-top: -60px;
     margin-bottom: 20px;
-    @include tipo-1(32);
-  
+    @include tipo-1(32);  
+   
+    @include d(c) {
+      margin-top: 10px;
+    }
     @include d(m) {
-       display: none;
-      }
+      display: none;
+  }
+
+    @include d(i) {
+      display: none;
+  }
 }
 
 .dio h2 {
@@ -16,6 +25,9 @@ h2 {
     @include d(l) {
       margin-top: 0px;
     }
+    @include d(i) {
+      display: none;
+  }
 }
     
 
@@ -27,9 +39,16 @@ h2 {
     @include d(l) {
       margin-bottom: 10px;
     }
+   
     @include d(m) {
-        margin-top: 150px;
+        margin-top: 20px;
       }
     
+    @include d(i) {
+      
+      margin-top: 5rem;
+     
+
+  }
    
 }

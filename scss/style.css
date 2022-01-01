@@ -387,6 +387,8 @@ body {
 /* Menu*/
 .container {
   position: fixed;
+  z-index: 1000;
+  top: 0;
   right: 0;
   left: 0;
   background: black;
@@ -405,6 +407,19 @@ body {
       flex-wrap: wrap;
   /* Primary Menu*/
   /*Menu Tablet*/
+}
+
+@media screen and (max-width: 29.625rem) {
+  .container {
+    position: initial;
+    margin-bottom: 300px;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .container {
+    margin-bottom: 250px;
+  }
 }
 
 .container .logo img {
@@ -796,6 +811,7 @@ body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.5)), url("/img/inter.png");
   height: calc(100vh - 84px);
   width: 100%;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -819,6 +835,7 @@ body {
 @media screen and (max-width: 48.75rem) {
   .filme-principal {
     height: calc(100vh - 75px);
+    margin-top: 40px;
   }
 }
 
@@ -878,13 +895,31 @@ body {
 @media screen and (max-width: 29.625rem) {
   .filme-principal .text {
     text-align: center;
-    margin-top: 15rem;
+  }
+}
+
+@media screen and (max-width: 48.75rem) {
+  .filme-principal .text {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 39.375rem) {
+  .filme-principal .text {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 38.313rem) {
+  .filme-principal .text {
+    margin-top: 250px;
   }
 }
 
 @media screen and (max-width: 20rem) {
   .filme-principal .text {
     margin-left: 1.5rem;
+    margin-top: 30rem;
   }
 }
 
@@ -898,6 +933,12 @@ body {
   .buttons {
     margin-left: 1.4rem;
     margin-top: -30px;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .buttons {
+    margin-top: 1rem;
   }
 }
 
@@ -929,13 +970,42 @@ body {
   background-color: #fff;
 }
 
+@media screen and (max-width: 48.75rem) {
+  .buttons .botao {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 38.313rem) {
+  .buttons .botao:nth-child(2) {
+    margin-bottom: 150px;
+  }
+}
+
 @media screen and (max-width: 36.938rem) {
   .buttons .botao {
     margin-top: 50px;
   }
+  .buttons .botao:nth-child(2) {
+    margin-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 29.625rem) {
+  .buttons .botao:nth-child(2) {
+    margin-bottom: 400px;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .buttons .botao:nth-child(2) {
+    margin-bottom: 600px;
+  }
 }
 
 h2 {
+  position: relative;
+  z-index: 1000;
   color: #fff;
   max-width: 95vw;
   margin-left: 45px;
@@ -946,7 +1016,19 @@ h2 {
   font-weight: 500;
 }
 
+@media screen and (max-width: 38.313rem) {
+  h2 {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 29.625rem) {
+  h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 20rem) {
   h2 {
     display: none;
   }
@@ -959,6 +1041,12 @@ h2 {
 @media screen and (max-width: 56.563rem) {
   .dio h2 {
     margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .dio h2 {
+    display: none;
   }
 }
 
@@ -976,7 +1064,13 @@ h2 {
 
 @media screen and (max-width: 29.625rem) {
   .box-cursos {
-    margin-top: 150px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .box-cursos {
+    margin-top: 5rem;
   }
 }
 

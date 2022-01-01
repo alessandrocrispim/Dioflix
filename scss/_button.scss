@@ -7,7 +7,10 @@
         margin-left: 1.4rem;
         margin-top: -30px;
     }
-
+    @include d(i) {
+       margin-top: 1rem;
+   
+    }
   
 
     .botao {
@@ -37,12 +40,42 @@
             color: black;
             background-color: $secondary-color;
         }
+        @include d(s) {
+            margin-bottom: 30px;
+          
+        }
+
+        @include d(c) {
+            &:nth-child(2) {
+                margin-bottom: 150px;
+            }
+
+           }
 
         @include d(b) {
             margin-top: 50px;
+            &:nth-child(2) {
+                margin-bottom: 120px;
+            }
+        }
+
+        @include d(m) {
+            &:nth-child(2) {
+                margin-bottom: 400px;
+            }
+            
+        }
+
+        @include d(i) {
+            &:nth-child(2) {
+                margin-bottom: 600px;
+            }
+            
         }
 
         
     }
+
+    
 
 }
